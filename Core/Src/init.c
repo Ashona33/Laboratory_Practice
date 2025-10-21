@@ -1,7 +1,7 @@
 #include "../Inc/init.h"
 
 void GPIO_Init_Memory(void){
-     *(uint32_t*)(0x40023800UL + 0x30UL) |= 0x06UL; //Включение тактирования порта GPIOB
+    *(uint32_t*)(0x40023800UL + 0x30UL) |= 0x06UL; //Включение тактирования порта GPIOB
 
     *(uint32_t*)(0x40020400UL+0x00UL) |= 0x4000UL; //Настройка работы 7-го пина GPIOB в режиме вывода сигнала
     *(uint32_t*)(0x40020400UL+0x04UL) |= 0x00UL; //Настройка на PushPull работу 7-го пина GPIOB

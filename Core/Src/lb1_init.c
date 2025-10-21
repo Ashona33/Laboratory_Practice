@@ -1,25 +1,27 @@
-#include "../Inc/init.h"
+#include "../Inc/lb1_init.h"
 
 void GPIO_Init_Memory(void){
     *(uint32_t*)(0x40023800UL+0x30UL) |= 0x06UL;         //Включение тактирования порта GPIOB и GPIOC
 
-    *(uint32_t*)(0x40020400UL+0x00UL) |= 0x10004005UL;   //Настройка работы 0, 1, 7, 14-го пина GPIOB в режиме вывода сигнала
-    *(uint32_t*)(0x40020400UL+0x04UL) |= 0x00UL;         //Настройка на Push-Pull работу 0, 1, 7, 14-го пина GPIOB
-    *(uint32_t*)(0x40020400UL+0x08UL) |= 0x4000UL;       //Настройка скорости работы 0, 1, 7, 14-го пина GPIOB на среднюю
-    *(uint32_t*)(0x40020400UL+0x18UL) |= 0x800000UL;     //Отключение PU/PDрезисторов для 0, 1, 7, 14-го пина GPIOB предварительное включение светодиода
+    *(uint32_t*)(0x40020400UL+0x00UL) |= 0x10004001UL;   //Настройка работы 0, 7, 14-го пина GPIOB в режиме вывода сигнала
+    *(uint32_t*)(0x40020400UL+0x08UL) |= 0x10004001UL;   //Настройка скорости работы 0, 7, 14-го пина GPIOB на среднюю
+    *(uint32_t*)(0x40020400UL+0x18UL) |= 0x40810000UL;   //Отключение PU/PDрезисторов для 0, 7, 14-го пина GPIOB предварительное включение светодиода
+    *(uint32_t*)(0x40020400UL+0x04UL) |= 0x4080UL;       //Настройка на Open-Drain работу 5, 6, 1-го пина GPIOС
 
-    *(uint32_t*)(0x40020800UL+0x00UL) |= 0x00UL;       //Настройка работы 5, 6, 7-го пина GPIOB в режиме ввода сигнала
-    *(uint32_t*)(0x40020800UL+0x04UL) |= 0x70UL;       //Настройка на Open-Drain работу 5, 6, 7-го пина GPIOB
-    *(uint32_t*)(0x40020800UL+0x08UL) |= 0x4000UL;       //Настройка скорости работы 5, 6, 7-го пина GPIOB на среднюю
-    *(uint32_t*)(0x40020800UL+0x18UL) |= 0x800000UL;     //Отключение PU/PDрезисторов для 5, 6, 7-го пина GPIOB предварительное включение светодиода
+    *(uint32_t*)(0x40020800UL+0x00UL) |= 0x00UL;         //Настройка работы 5, 6, 1-го пина GPIOС в режиме ввода сигнала
+    *(uint32_t*)(0x40020800UL+0x18UL) |= 0x62L;          //Включение PU/PDрезисторов для 5, 6, 1-го пина GPIOС предварительное включение светодиода
 }
 
 void GPIO_Init_Myself_Macros(void){
     RCC_AHB1ENR |= RCC_GPIOB_EN | RCC_GPIOC_EN;
 
-    BIT_SET(GPIOB_MODER, GPIOB_PIN7_OUT);
-    BIT_SET(GPIOB_OSPEEDR, GPIOB_PIN7_MED);
-    BIT_SET(GPIOB_BSRR, GPIOB_PIN7_RESERT);
+    BIT_SET(GPIOB_MODER, RED_GPIOB14 | BLUE_GPIOB7 | YELLOW_GPIOB0);
+    BIT_SET(GPIOB_OSPEEDR, RED_GPIOB14 | BLUE_GPIOB7 | YELLOW_GPIOB0);
+    BIT_SET(GPIOB_BSRR, GPIOB_RESERT);
+    BIT_SET(GPIOB_OTYPER_7_14, RED_GPIOB14_OTYPER | BLUE_GPIOB7_OTYPER);
+
+    BIT_SET(GPIOC_MODER, BUTTON1_GPIOC5 | BUTTON2_GPIOC6 | BUTTON3_GPIOC1);
+    BIT_SET(GPIOC_BSRR, GPIOC_RESERT);
 }
 
 void GPIO_Init_CMSIS(void){
