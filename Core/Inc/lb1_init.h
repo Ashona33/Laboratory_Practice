@@ -10,11 +10,11 @@
 
 #define GPIOB_MODER (*(uint32_t*)(0x40020400UL + 0x00UL))
 #define GPIOB_OSPEEDR (*(uint32_t*)(0x40020400UL + 0x08UL))
-#define GPIOB_BSRR (*(uint32_t*)(0x40020400UL + 0x18UL))
+#define GPIOB_BSRR (*(uint32_t*)(0x40020400UL + 0x0CUL))
 #define GPIOB_OTYPER_7_14 (*(uint32_t*)(0x40020400UL + 0x04UL))
 
 #define GPIOC_MODER (*(uint32_t*)(0x40020800UL + 0x00UL))
-#define GPIOC_BSRR (*(uint32_t*)(0x40020800UL + 0x18UL))
+#define GPIOC_BSRR (*(uint32_t*)(0x40020800UL + 0x0CUL))
 #define GPIOC_IDR (*(uint32_t*)(0x40020800UL + 0x10UL))
 
 
