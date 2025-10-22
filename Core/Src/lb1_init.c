@@ -8,7 +8,8 @@ void GPIO_Init_Memory(void){
     *(uint32_t*)(0x40020400UL+0x08UL) |= 0x10004001UL;   //Настройка скорости работы 0, 7, 14-го пина GPIOB на среднюю
     *(uint32_t*)(0x40020400UL+0x18UL) |= 0x40810000UL;
     
-    *(uint32_t*)(0x40020800UL+0x08UL) |= 0x04UL;
+    *(uint32_t*)(0x40020800UL+0x00UL) |= 0x0000000000000000UL;
+    *(uint32_t*)(0x40020800UL+0x08UL) |= 0x100000UL;
 }
 
 void GPIO_Init_Myself_Macros(void){
@@ -19,7 +20,7 @@ void GPIO_Init_Myself_Macros(void){
     BIT_SET(GPIOB_OSPEEDR, RED_GPIOB14 | BLUE_GPIOB7 | YELLOW_GPIOB0);
     BIT_SET(GPIOB_BSRR, GPIOB_RED_RESET | GPIOB_BLUE_RESET | GPIOB_YELLOW_RESET);
 
-    BIT_SET(GPIOC_OSPEEDR, LED_GPIOC1);
+    BIT_SET(GPIOC_OSPEEDR, LED_GPIOC10_OUT);
 }
 
 void GPIO_Init_CMSIS(void){

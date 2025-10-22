@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\anast\AppData\Local\Temp\cccKQcpd.s 			page 1
+ARM GAS  C:\Users\anast\AppData\Local\Temp\cc5nleVE.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -36,11 +36,11 @@ ARM GAS  C:\Users\anast\AppData\Local\Temp\cccKQcpd.s 			page 1
   31              		@ args = 0, pretend = 0, frame = 0
   32              		@ frame_needed = 0, uses_anonymous_args = 0
   33              		@ link register save eliminated.
-   4:Core/Src/init.c ****      *(uint32_t*)(0x40023800UL + 0x30UL) |= 0x06UL; //Включение тактирования �
-  34              		.loc 1 4 6 view .LVU1
+   4:Core/Src/init.c ****     *(uint32_t*)(0x40023800UL + 0x30UL) |= 0x06UL; //Включение тактирования п
+  34              		.loc 1 4 5 view .LVU1
   35 0000 0D4A     		ldr	r2, .L2
   36 0002 D2F83038 		ldr	r3, [r2, #2096]
-  37              		.loc 1 4 42 is_stmt 0 view .LVU2
+  37              		.loc 1 4 41 is_stmt 0 view .LVU2
   38 0006 43F00603 		orr	r3, r3, #6
   39 000a C2F83038 		str	r3, [r2, #2096]
    5:Core/Src/init.c **** 
@@ -58,11 +58,11 @@ ARM GAS  C:\Users\anast\AppData\Local\Temp\cccKQcpd.s 			page 1
   48 001c D3F80824 		ldr	r2, [r3, #1032]
   49              		.loc 1 8 39 is_stmt 0 view .LVU7
   50 0020 42F48042 		orr	r2, r2, #16384
-ARM GAS  C:\Users\anast\AppData\Local\Temp\cccKQcpd.s 			page 2
+ARM GAS  C:\Users\anast\AppData\Local\Temp\cc5nleVE.s 			page 2
 
 
   51 0024 C3F80824 		str	r2, [r3, #1032]
-   9:Core/Src/init.c ****     *(uint32_t*)(0x40020400UL+0x18UL) |= 0x800000UL; //Отключение PU/PDрезисторо
+   9:Core/Src/init.c ****     *(uint32_t*)(0x40020400UL+0x18UL) |= 0x800000UL; //Отключение PU/PD резистор�
   52              		.loc 1 9 5 is_stmt 1 view .LVU8
   53 0028 D3F81824 		ldr	r2, [r3, #1048]
   54              		.loc 1 9 39 is_stmt 0 view .LVU9
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\anast\AppData\Local\Temp\cccKQcpd.s 			page 1
   98 002c 42F40002 		orr	r2, r2, #8388608
   99 0030 C3F81824 		str	r2, [r3, #1048]
   18:Core/Src/init.c **** }
-ARM GAS  C:\Users\anast\AppData\Local\Temp\cccKQcpd.s 			page 3
+ARM GAS  C:\Users\anast\AppData\Local\Temp\cc5nleVE.s 			page 3
 
 
  100              		.loc 1 18 1 is_stmt 0 view .LVU17
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\anast\AppData\Local\Temp\cccKQcpd.s 			page 1
  147 002c 7047     		bx	lr
  148              	.L9:
  149 002e 00BF     		.align	2
-ARM GAS  C:\Users\anast\AppData\Local\Temp\cccKQcpd.s 			page 4
+ARM GAS  C:\Users\anast\AppData\Local\Temp\cc5nleVE.s 			page 4
 
 
  150              	.L8:
@@ -191,19 +191,19 @@ ARM GAS  C:\Users\anast\AppData\Local\Temp\cccKQcpd.s 			page 1
  158              		.file 2 "D:/Tools/xpack-arm-none-eabi-gcc-13.2.1-1.1/arm-none-eabi/include/machine/_default_types.
  159              		.file 3 "D:/Tools/xpack-arm-none-eabi-gcc-13.2.1-1.1/arm-none-eabi/include/sys/_stdint.h"
  160              		.file 4 "CMSIS/Devices/STM32F4xx/Inc/STM32F429xx/stm32f429xx.h"
-ARM GAS  C:\Users\anast\AppData\Local\Temp\cccKQcpd.s 			page 5
+ARM GAS  C:\Users\anast\AppData\Local\Temp\cc5nleVE.s 			page 5
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 init.c
-C:\Users\anast\AppData\Local\Temp\cccKQcpd.s:21     .text.GPIO_Init_Memory:00000000 $t
-C:\Users\anast\AppData\Local\Temp\cccKQcpd.s:27     .text.GPIO_Init_Memory:00000000 GPIO_Init_Memory
-C:\Users\anast\AppData\Local\Temp\cccKQcpd.s:62     .text.GPIO_Init_Memory:00000038 $d
-C:\Users\anast\AppData\Local\Temp\cccKQcpd.s:68     .text.GPIO_Init_Myself_Macros:00000000 $t
-C:\Users\anast\AppData\Local\Temp\cccKQcpd.s:74     .text.GPIO_Init_Myself_Macros:00000000 GPIO_Init_Myself_Macros
-C:\Users\anast\AppData\Local\Temp\cccKQcpd.s:105    .text.GPIO_Init_Myself_Macros:00000038 $d
-C:\Users\anast\AppData\Local\Temp\cccKQcpd.s:111    .text.GPIO_Init_CMSIS:00000000 $t
-C:\Users\anast\AppData\Local\Temp\cccKQcpd.s:117    .text.GPIO_Init_CMSIS:00000000 GPIO_Init_CMSIS
-C:\Users\anast\AppData\Local\Temp\cccKQcpd.s:151    .text.GPIO_Init_CMSIS:00000030 $d
+C:\Users\anast\AppData\Local\Temp\cc5nleVE.s:21     .text.GPIO_Init_Memory:00000000 $t
+C:\Users\anast\AppData\Local\Temp\cc5nleVE.s:27     .text.GPIO_Init_Memory:00000000 GPIO_Init_Memory
+C:\Users\anast\AppData\Local\Temp\cc5nleVE.s:62     .text.GPIO_Init_Memory:00000038 $d
+C:\Users\anast\AppData\Local\Temp\cc5nleVE.s:68     .text.GPIO_Init_Myself_Macros:00000000 $t
+C:\Users\anast\AppData\Local\Temp\cc5nleVE.s:74     .text.GPIO_Init_Myself_Macros:00000000 GPIO_Init_Myself_Macros
+C:\Users\anast\AppData\Local\Temp\cc5nleVE.s:105    .text.GPIO_Init_Myself_Macros:00000038 $d
+C:\Users\anast\AppData\Local\Temp\cc5nleVE.s:111    .text.GPIO_Init_CMSIS:00000000 $t
+C:\Users\anast\AppData\Local\Temp\cc5nleVE.s:117    .text.GPIO_Init_CMSIS:00000000 GPIO_Init_CMSIS
+C:\Users\anast\AppData\Local\Temp\cc5nleVE.s:151    .text.GPIO_Init_CMSIS:00000030 $d
 
 NO UNDEFINED SYMBOLS

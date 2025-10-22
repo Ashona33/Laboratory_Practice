@@ -19,10 +19,11 @@
 #define GPIOC_IDR (*(uint32_t*)(0x40020800UL + 0x10UL))
 
 
-#define BUTTON1_GPIOC5          0x00UL
-#define BUTTON2_GPIOC6          0x00UL
-#define BUTTON3_GPIOC1          0x00UL
-#define LED_GPIOC1              0x04UL
+#define BUTTON1_GPIOC8          0x100UL
+#define BUTTON2_GPIOC9          0x200UL
+#define BUTTON3_GPIOC10         0x400UL
+#define BUTTON3_GPIOC10_OUT     0x00UL
+#define LED_GPIOC10_OUT         0x100000UL
 
 #define RED_GPIOB14             0x10000000UL
 #define RED_GPIOB14_OTYPER      0x4000UL
@@ -38,9 +39,11 @@
 #define GPIOB_BLUE_RESET        0x800000UL
 #define GPIOB_YELLOW_RESET      0x10000UL
 
-#define GPIOC_LED_SET           0x20000UL
-#define GPIOC_LED_RESET         0x20000UL
+#define GPIOC_LED_SET           0x400UL
+#define GPIOC_LED_RESET         0x4000000UL
 
+#define BIT_READ(REG, BIT) (REG & BIT)
+#define BIT_SET(REG, BIT) (REG |= BIT)
 
 void GPIO_Init_Memory(void);
 void GPIO_Init_Myself_Macros(void);

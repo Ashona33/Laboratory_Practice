@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\anast\AppData\Local\Temp\ccspIxQb.s 			page 1
+ARM GAS  C:\Users\anast\AppData\Local\Temp\ccr275yx.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\anast\AppData\Local\Temp\ccspIxQb.s 			page 1
   10:Core/Src/main.c ****         if (BIT_READ(GPIOB_IDR,GPIOB_PIN13)){ //считываем данные с вывода Р�
   11:Core/Src/main.c ****             BIT_SET(GPIOB_BSRR,GPIOB_PIN7_SET); //включение светодиода, реги
   47              		.loc 1 11 13 view .LVU3
-ARM GAS  C:\Users\anast\AppData\Local\Temp\ccspIxQb.s 			page 2
+ARM GAS  C:\Users\anast\AppData\Local\Temp\ccr275yx.s 			page 2
 
 
   48 000c A2F58062 		sub	r2, r2, #1024
@@ -107,14 +107,14 @@ ARM GAS  C:\Users\anast\AppData\Local\Temp\ccspIxQb.s 			page 1
   83              		.file 3 "D:/Tools/xpack-arm-none-eabi-gcc-13.2.1-1.1/arm-none-eabi/include/sys/_stdint.h"
   84              		.file 4 "CMSIS/Devices/STM32F4xx/Inc/STM32F429xx/stm32f429xx.h"
   85              		.file 5 "Core/Src/../Inc/init.h"
-ARM GAS  C:\Users\anast\AppData\Local\Temp\ccspIxQb.s 			page 3
+ARM GAS  C:\Users\anast\AppData\Local\Temp\ccr275yx.s 			page 3
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 main.c
-C:\Users\anast\AppData\Local\Temp\ccspIxQb.s:21     .text.main:00000000 $t
-C:\Users\anast\AppData\Local\Temp\ccspIxQb.s:27     .text.main:00000000 main
-C:\Users\anast\AppData\Local\Temp\ccspIxQb.s:75     .text.main:00000044 $d
+C:\Users\anast\AppData\Local\Temp\ccr275yx.s:21     .text.main:00000000 $t
+C:\Users\anast\AppData\Local\Temp\ccr275yx.s:27     .text.main:00000000 main
+C:\Users\anast\AppData\Local\Temp\ccr275yx.s:75     .text.main:00000044 $d
 
 UNDEFINED SYMBOLS
 GPIO_Init_Myself_Macros

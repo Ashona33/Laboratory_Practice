@@ -126,8 +126,8 @@ endif
 # C sources
 C_SOURCES =  \
 $(SYS) \
-Core/Src/main.c \
-Core/Src/init.c \
+Core/Src/lb1_main.c \
+Core/Src/lb1_init.c \
 
 # ASM sources
 ASM_SOURCES =  \
