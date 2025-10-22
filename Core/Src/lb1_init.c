@@ -6,10 +6,9 @@ void GPIO_Init_Memory(void){
     *(uint32_t*)(0x40020400UL+0x00UL) |= 0x10004001UL;   //Настройка работы 0, 7, 14-го пина GPIOB в режиме вывода сигнала
     *(uint32_t*)(0x40020400UL+0x04UL) |= 0x4080UL;       //Настройка на Open-Drain
     *(uint32_t*)(0x40020400UL+0x08UL) |= 0x10004001UL;   //Настройка скорости работы 0, 7, 14-го пина GPIOB на среднюю
-    *(uint32_t*)(0x40020400UL+0x0CUL) |= 0x40810000UL;   //Отключение PU/PDрезисторов для 0, 7, 14-го пина GPIOB предварительное включение светодиода
+    *(uint32_t*)(0x40020400UL+0x18UL) |= 0x40810000UL;
     
-    *(uint32_t*)(0x40020800UL+0x00UL) |= 0x00UL;         //Настройка работы 5, 6, 1-го пина GPIOС в режиме ввода сигнала
-    *(uint32_t*)(0x40020800UL+0x0CUL) |= 0x62L;          //Включение PU/PDрезисторов для 5, 6, 1-го пина GPIOС предварительное включение светодиода
+    *(uint32_t*)(0x40020800UL+0x08UL) |= 0x04UL;
 }
 
 void GPIO_Init_Myself_Macros(void){
@@ -18,10 +17,9 @@ void GPIO_Init_Myself_Macros(void){
     BIT_SET(GPIOB_MODER, RED_GPIOB14 | BLUE_GPIOB7 | YELLOW_GPIOB0);
     BIT_SET(GPIOB_OTYPER_7_14, RED_GPIOB14_OTYPER | BLUE_GPIOB7_OTYPER);
     BIT_SET(GPIOB_OSPEEDR, RED_GPIOB14 | BLUE_GPIOB7 | YELLOW_GPIOB0);
-    BIT_SET(GPIOB_BSRR, GPIOB_RESERT);
+    BIT_SET(GPIOB_BSRR, GPIOB_RED_RESET | GPIOB_BLUE_RESET | GPIOB_YELLOW_RESET);
 
-    BIT_SET(GPIOC_MODER, BUTTON1_GPIOC5 | BUTTON2_GPIOC6 | BUTTON3_GPIOC1);
-    BIT_SET(GPIOC_BSRR, GPIOC_RESERT);
+    BIT_SET(GPIOC_OSPEEDR, LED_GPIOC1);
 }
 
 void GPIO_Init_CMSIS(void){
@@ -30,7 +28,9 @@ void GPIO_Init_CMSIS(void){
     SET_BIT(GPIOB->MODER, GPIO_MODER_MODE14_0 | GPIO_MODER_MODE7_0 | GPIO_MODER_MODE0_0); // включение красного светодиода, настройка пина PB14 на вывод
     SET_BIT(GPIOB->OTYPER, GPIO_OTYPER_OT7 | GPIO_OTYPER_OT14); //
     SET_BIT(GPIOB->OSPEEDR, GPIO_OSPEEDER_OSPEEDR0_0 | GPIO_OSPEEDER_OSPEEDR7_0 | GPIO_OSPEEDER_OSPEEDR14_0); //
-    SET_BIT(GPIOB->BSRR, GPIO_BSRR_BR14); //
+    SET_BIT(GPIOB->BSRR, GPIO_BSRR_BR0 | GPIO_BSRR_BR7 | GPIO_BSRR_BR14); //
+
+    SET_BIT(GPIOC->OSPEEDR, GPIO_OSPEEDER_OSPEEDR1_0);
 }
 
 
