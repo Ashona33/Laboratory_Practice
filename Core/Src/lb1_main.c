@@ -7,11 +7,11 @@ int main(void){
     GPIO_Init_Memory();
 
     while(1){
+        //SET_BIT(GPIOB->BSRR, GPIO_BSRR_BR_14 + GPIO_BSRR_BR_7 + GPIO_BSRR_BR_0);
         if (BIT_READ(GPIOC_IDR, BUTTON1_GPIOC8)){ 
             BIT_SET(GPIOB_BSRR, GPIOB_RED_SET); 
             BIT_SET(GPIOC_MODER, BUTTON3_GPIOC10_OUT);
             flag = 0;
-            BIT_SET(GPIOB_BSRR, GPIOC_LED_RESET);
         }
         else { BIT_SET(GPIOB_BSRR, GPIOB_RED_RESET); }
 
@@ -27,10 +27,11 @@ int main(void){
                 BIT_SET(GPIOB_BSRR, GPIOB_YELLOW_SET); 
             }
             else { BIT_SET(GPIOB_BSRR, GPIOB_YELLOW_RESET); }
+            BIT_SET(GPIOC_BSRR, GPIOC_LED_RESET);
         }
 
         if (flag){
-            BIT_SET(GPIOB_BSRR, GPIOC_LED_SET);
+            BIT_SET(GPIOC_BSRR, GPIOC_LED_SET);
         }
     }
 }

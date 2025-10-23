@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\anast\AppData\Local\Temp\cchtGjrM.s 			page 1
+ARM GAS  C:\Users\anast\AppData\Local\Temp\cc0E6N3d.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -52,27 +52,27 @@ ARM GAS  C:\Users\anast\AppData\Local\Temp\cchtGjrM.s 			page 1
    6:Core/Src/lb1_main.c ****     bool flag = 0;
   43              		.loc 1 6 10 is_stmt 0 view .LVU3
   44 0006 0022     		movs	r2, #0
-  45 0008 27E0     		b	.L2
+  45 0008 2EE0     		b	.L2
   46              	.LVL2:
   47              	.L3:
    8:Core/Src/lb1_main.c **** 
    9:Core/Src/lb1_main.c ****     while(1){
-  10:Core/Src/lb1_main.c ****         if (BIT_READ(GPIOC_IDR, BUTTON1_GPIOC8)){ 
-ARM GAS  C:\Users\anast\AppData\Local\Temp\cchtGjrM.s 			page 2
+  10:Core/Src/lb1_main.c ****         //SET_BIT(GPIOB->BSRR, GPIO_BSRR_BR_14 + GPIO_BSRR_BR_7 + GPIO_BSRR_BR_0);
+ARM GAS  C:\Users\anast\AppData\Local\Temp\cc0E6N3d.s 			page 2
 
 
-  11:Core/Src/lb1_main.c ****             BIT_SET(GPIOB_BSRR, GPIOB_RED_SET); 
-  12:Core/Src/lb1_main.c ****             BIT_SET(GPIOC_MODER, BUTTON3_GPIOC10_OUT);
-  13:Core/Src/lb1_main.c ****             flag = 0;
-  14:Core/Src/lb1_main.c ****             BIT_SET(GPIOB_BSRR, GPIOC_LED_RESET);
+  11:Core/Src/lb1_main.c ****         if (BIT_READ(GPIOC_IDR, BUTTON1_GPIOC8)){ 
+  12:Core/Src/lb1_main.c ****             BIT_SET(GPIOB_BSRR, GPIOB_RED_SET); 
+  13:Core/Src/lb1_main.c ****             BIT_SET(GPIOC_MODER, BUTTON3_GPIOC10_OUT);
+  14:Core/Src/lb1_main.c ****             flag = 0;
   15:Core/Src/lb1_main.c ****         }
   16:Core/Src/lb1_main.c ****         else { BIT_SET(GPIOB_BSRR, GPIOB_RED_RESET); }
   48              		.loc 1 16 16 is_stmt 1 view .LVU4
-  49 000a 2949     		ldr	r1, .L11
+  49 000a 2A49     		ldr	r1, .L12
   50 000c D1F81834 		ldr	r3, [r1, #1048]
   51 0010 43F08043 		orr	r3, r3, #1073741824
   52 0014 C1F81834 		str	r3, [r1, #1048]
-  53 0018 33E0     		b	.L4
+  53 0018 34E0     		b	.L4
   54              	.L5:
   17:Core/Src/lb1_main.c **** 
   18:Core/Src/lb1_main.c ****         if (BIT_READ(GPIOC_IDR, BUTTON2_GPIOC9)){ 
@@ -82,7 +82,7 @@ ARM GAS  C:\Users\anast\AppData\Local\Temp\cchtGjrM.s 			page 1
   22:Core/Src/lb1_main.c ****         }
   23:Core/Src/lb1_main.c ****         else { BIT_SET(GPIOB_BSRR, GPIOB_BLUE_RESET); }
   55              		.loc 1 23 16 view .LVU5
-  56 001a 2549     		ldr	r1, .L11
+  56 001a 2649     		ldr	r1, .L12
   57 001c D1F81834 		ldr	r3, [r1, #1048]
   58 0020 43F40000 		orr	r0, r3, #8388608
   59 0024 C1F81804 		str	r0, [r1, #1048]
@@ -90,143 +90,146 @@ ARM GAS  C:\Users\anast\AppData\Local\Temp\cchtGjrM.s 			page 1
   25:Core/Src/lb1_main.c ****         if (!flag){
   60              		.loc 1 25 9 view .LVU6
   61              		.loc 1 25 12 is_stmt 0 view .LVU7
-  62 0028 82B9     		cbnz	r2, .L7
+  62 0028 BAB9     		cbnz	r2, .L7
   26:Core/Src/lb1_main.c ****             if (BIT_READ(GPIOC_IDR, BUTTON3_GPIOC10)){ 
   63              		.loc 1 26 13 is_stmt 1 view .LVU8
   64              		.loc 1 26 17 is_stmt 0 view .LVU9
   65 002a D1F81018 		ldr	r1, [r1, #2064]
   66              		.loc 1 26 16 view .LVU10
   67 002e 11F4806F 		tst	r1, #1024
-  68 0032 05D0     		beq	.L8
+  68 0032 0CD0     		beq	.L8
   27:Core/Src/lb1_main.c ****                 BIT_SET(GPIOB_BSRR, GPIOB_YELLOW_SET); 
   69              		.loc 1 27 17 is_stmt 1 view .LVU11
   70 0034 40F00103 		orr	r3, r0, #1
-  71 0038 1D49     		ldr	r1, .L11
+  71 0038 1E49     		ldr	r1, .L12
   72 003a C1F81834 		str	r3, [r1, #1048]
-  73 003e 34E0     		b	.L6
-  74              	.L8:
+  73              	.L9:
   28:Core/Src/lb1_main.c ****             }
   29:Core/Src/lb1_main.c ****             else { BIT_SET(GPIOB_BSRR, GPIOB_YELLOW_RESET); }
-  75              		.loc 1 29 20 view .LVU12
-  76 0040 43F40103 		orr	r3, r3, #8454144
-  77 0044 1A49     		ldr	r1, .L11
-  78 0046 C1F81834 		str	r3, [r1, #1048]
-  79 004a 2EE0     		b	.L6
-  80              	.LVL3:
-  81              	.L7:
-  30:Core/Src/lb1_main.c ****         }
-  31:Core/Src/lb1_main.c **** 
-  32:Core/Src/lb1_main.c ****         if (flag){
-  33:Core/Src/lb1_main.c ****             BIT_SET(GPIOB_BSRR, GPIOC_LED_SET);
-ARM GAS  C:\Users\anast\AppData\Local\Temp\cchtGjrM.s 			page 3
+  30:Core/Src/lb1_main.c ****             BIT_SET(GPIOC_BSRR, GPIOC_LED_RESET);
+  74              		.loc 1 30 13 view .LVU12
+  75 003e 1D49     		ldr	r1, .L12
+  76 0040 D1F81838 		ldr	r3, [r1, #2072]
+  77 0044 43F08063 		orr	r3, r3, #67108864
+  78 0048 C1F81838 		str	r3, [r1, #2072]
+  79 004c 2EE0     		b	.L6
+  80              	.L8:
+  29:Core/Src/lb1_main.c ****             BIT_SET(GPIOC_BSRR, GPIOC_LED_RESET);
+  81              		.loc 1 29 20 view .LVU13
+  82 004e 43F40103 		orr	r3, r3, #8454144
+  83 0052 1849     		ldr	r1, .L12
+ARM GAS  C:\Users\anast\AppData\Local\Temp\cc0E6N3d.s 			page 3
 
 
-  82              		.loc 1 33 13 view .LVU13
-  83 004c 1849     		ldr	r1, .L11
-  84 004e D1F81834 		ldr	r3, [r1, #1048]
-  85 0052 43F48063 		orr	r3, r3, #1024
-  86 0056 C1F81834 		str	r3, [r1, #1048]
-  87              	.L2:
-  88              	.LVL4:
-   9:Core/Src/lb1_main.c ****         if (BIT_READ(GPIOC_IDR, BUTTON1_GPIOC8)){ 
-  89              		.loc 1 9 5 view .LVU14
-  10:Core/Src/lb1_main.c ****             BIT_SET(GPIOB_BSRR, GPIOB_RED_SET); 
-  90              		.loc 1 10 9 view .LVU15
-  10:Core/Src/lb1_main.c ****             BIT_SET(GPIOB_BSRR, GPIOB_RED_SET); 
-  91              		.loc 1 10 13 is_stmt 0 view .LVU16
-  92 005a 154B     		ldr	r3, .L11
-  93 005c D3F81038 		ldr	r3, [r3, #2064]
-  10:Core/Src/lb1_main.c ****             BIT_SET(GPIOB_BSRR, GPIOB_RED_SET); 
-  94              		.loc 1 10 12 view .LVU17
-  95 0060 13F4807F 		tst	r3, #256
-  96 0064 D1D0     		beq	.L3
-  11:Core/Src/lb1_main.c ****             BIT_SET(GPIOC_MODER, BUTTON3_GPIOC10_OUT);
-  97              		.loc 1 11 13 is_stmt 1 view .LVU18
-  98 0066 124A     		ldr	r2, .L11
-  99              	.LVL5:
-  11:Core/Src/lb1_main.c ****             BIT_SET(GPIOC_MODER, BUTTON3_GPIOC10_OUT);
- 100              		.loc 1 11 13 is_stmt 0 view .LVU19
- 101 0068 D2F81834 		ldr	r3, [r2, #1048]
- 102 006c 43F48041 		orr	r1, r3, #16384
- 103 0070 C2F81814 		str	r1, [r2, #1048]
-  12:Core/Src/lb1_main.c ****             flag = 0;
- 104              		.loc 1 12 13 is_stmt 1 view .LVU20
-  13:Core/Src/lb1_main.c ****             BIT_SET(GPIOB_BSRR, GPIOC_LED_RESET);
- 105              		.loc 1 13 13 view .LVU21
- 106              	.LVL6:
+  84 0054 C1F81834 		str	r3, [r1, #1048]
+  85 0058 F1E7     		b	.L9
+  86              	.LVL3:
+  87              	.L7:
+  31:Core/Src/lb1_main.c ****         }
+  32:Core/Src/lb1_main.c **** 
+  33:Core/Src/lb1_main.c ****         if (flag){
+  34:Core/Src/lb1_main.c ****             BIT_SET(GPIOC_BSRR, GPIOC_LED_SET);
+  88              		.loc 1 34 13 view .LVU14
+  89 005a 1649     		ldr	r1, .L12
+  90 005c D1F81838 		ldr	r3, [r1, #2072]
+  91 0060 43F48063 		orr	r3, r3, #1024
+  92 0064 C1F81838 		str	r3, [r1, #2072]
+  93              	.L2:
+  94              	.LVL4:
+   9:Core/Src/lb1_main.c ****         //SET_BIT(GPIOB->BSRR, GPIO_BSRR_BR_14 + GPIO_BSRR_BR_7 + GPIO_BSRR_BR_0);
+  95              		.loc 1 9 5 view .LVU15
+  11:Core/Src/lb1_main.c ****             BIT_SET(GPIOB_BSRR, GPIOB_RED_SET); 
+  96              		.loc 1 11 9 view .LVU16
+  11:Core/Src/lb1_main.c ****             BIT_SET(GPIOB_BSRR, GPIOB_RED_SET); 
+  97              		.loc 1 11 13 is_stmt 0 view .LVU17
+  98 0068 124B     		ldr	r3, .L12
+  99 006a D3F81038 		ldr	r3, [r3, #2064]
+  11:Core/Src/lb1_main.c ****             BIT_SET(GPIOB_BSRR, GPIOB_RED_SET); 
+ 100              		.loc 1 11 12 view .LVU18
+ 101 006e 13F4807F 		tst	r3, #256
+ 102 0072 CAD0     		beq	.L3
+  12:Core/Src/lb1_main.c ****             BIT_SET(GPIOC_MODER, BUTTON3_GPIOC10_OUT);
+ 103              		.loc 1 12 13 is_stmt 1 view .LVU19
+ 104 0074 0F4A     		ldr	r2, .L12
+ 105              	.LVL5:
+  12:Core/Src/lb1_main.c ****             BIT_SET(GPIOC_MODER, BUTTON3_GPIOC10_OUT);
+ 106              		.loc 1 12 13 is_stmt 0 view .LVU20
+ 107 0076 D2F81834 		ldr	r3, [r2, #1048]
+ 108 007a 43F48043 		orr	r3, r3, #16384
+ 109 007e C2F81834 		str	r3, [r2, #1048]
+  13:Core/Src/lb1_main.c ****             flag = 0;
+ 110              		.loc 1 13 13 is_stmt 1 view .LVU21
   14:Core/Src/lb1_main.c ****         }
- 107              		.loc 1 14 13 view .LVU22
- 108 0074 43F08063 		orr	r3, r3, #67108864
- 109 0078 43F48043 		orr	r3, r3, #16384
- 110 007c C2F81834 		str	r3, [r2, #1048]
-  13:Core/Src/lb1_main.c ****             BIT_SET(GPIOB_BSRR, GPIOC_LED_RESET);
- 111              		.loc 1 13 18 is_stmt 0 view .LVU23
- 112 0080 0022     		movs	r2, #0
- 113              	.LVL7:
- 114              	.L4:
+ 111              		.loc 1 14 13 view .LVU22
+ 112              	.LVL6:
+  14:Core/Src/lb1_main.c ****         }
+ 113              		.loc 1 14 18 is_stmt 0 view .LVU23
+ 114 0082 0022     		movs	r2, #0
+ 115              	.LVL7:
+ 116              	.L4:
   18:Core/Src/lb1_main.c ****             BIT_SET(GPIOB_BSRR, GPIOB_BLUE_SET); 
- 115              		.loc 1 18 9 is_stmt 1 view .LVU24
+ 117              		.loc 1 18 9 is_stmt 1 view .LVU24
   18:Core/Src/lb1_main.c ****             BIT_SET(GPIOB_BSRR, GPIOB_BLUE_SET); 
- 116              		.loc 1 18 13 is_stmt 0 view .LVU25
- 117 0082 0B4B     		ldr	r3, .L11
- 118 0084 D3F81038 		ldr	r3, [r3, #2064]
+ 118              		.loc 1 18 13 is_stmt 0 view .LVU25
+ 119 0084 0B4B     		ldr	r3, .L12
+ 120 0086 D3F81038 		ldr	r3, [r3, #2064]
   18:Core/Src/lb1_main.c ****             BIT_SET(GPIOB_BSRR, GPIOB_BLUE_SET); 
- 119              		.loc 1 18 12 view .LVU26
- 120 0088 13F4007F 		tst	r3, #512
- 121 008c C5D0     		beq	.L5
+ 121              		.loc 1 18 12 view .LVU26
+ 122 008a 13F4007F 		tst	r3, #512
+ 123 008e C4D0     		beq	.L5
   19:Core/Src/lb1_main.c ****             BIT_SET(GPIOC_MODER, LED_GPIOC10_OUT);
- 122              		.loc 1 19 13 is_stmt 1 view .LVU27
- 123 008e 084B     		ldr	r3, .L11
- 124 0090 D3F81824 		ldr	r2, [r3, #1048]
-ARM GAS  C:\Users\anast\AppData\Local\Temp\cchtGjrM.s 			page 4
+ARM GAS  C:\Users\anast\AppData\Local\Temp\cc0E6N3d.s 			page 4
 
 
- 125              	.LVL8:
+ 124              		.loc 1 19 13 is_stmt 1 view .LVU27
+ 125 0090 084B     		ldr	r3, .L12
+ 126 0092 D3F81824 		ldr	r2, [r3, #1048]
+ 127              	.LVL8:
   19:Core/Src/lb1_main.c ****             BIT_SET(GPIOC_MODER, LED_GPIOC10_OUT);
- 126              		.loc 1 19 13 is_stmt 0 view .LVU28
- 127 0094 42F08002 		orr	r2, r2, #128
- 128 0098 C3F81824 		str	r2, [r3, #1048]
+ 128              		.loc 1 19 13 is_stmt 0 view .LVU28
+ 129 0096 42F08002 		orr	r2, r2, #128
+ 130 009a C3F81824 		str	r2, [r3, #1048]
   20:Core/Src/lb1_main.c ****             flag = 1;
- 129              		.loc 1 20 13 is_stmt 1 view .LVU29
- 130 009c D3F80028 		ldr	r2, [r3, #2048]
- 131 00a0 42F48012 		orr	r2, r2, #1048576
- 132 00a4 C3F80028 		str	r2, [r3, #2048]
+ 131              		.loc 1 20 13 is_stmt 1 view .LVU29
+ 132 009e D3F80028 		ldr	r2, [r3, #2048]
+ 133 00a2 42F48012 		orr	r2, r2, #1048576
+ 134 00a6 C3F80028 		str	r2, [r3, #2048]
   21:Core/Src/lb1_main.c ****         }
- 133              		.loc 1 21 13 view .LVU30
- 134              	.LVL9:
+ 135              		.loc 1 21 13 view .LVU30
+ 136              	.LVL9:
   25:Core/Src/lb1_main.c ****             if (BIT_READ(GPIOC_IDR, BUTTON3_GPIOC10)){ 
- 135              		.loc 1 25 9 view .LVU31
+ 137              		.loc 1 25 9 view .LVU31
   21:Core/Src/lb1_main.c ****         }
- 136              		.loc 1 21 18 is_stmt 0 view .LVU32
- 137 00a8 0122     		movs	r2, #1
- 138              	.LVL10:
- 139              	.L6:
-  32:Core/Src/lb1_main.c ****             BIT_SET(GPIOB_BSRR, GPIOC_LED_SET);
- 140              		.loc 1 32 9 is_stmt 1 view .LVU33
-  32:Core/Src/lb1_main.c ****             BIT_SET(GPIOB_BSRR, GPIOC_LED_SET);
- 141              		.loc 1 32 12 is_stmt 0 view .LVU34
- 142 00aa 002A     		cmp	r2, #0
- 143 00ac D5D0     		beq	.L2
- 144 00ae CDE7     		b	.L7
- 145              	.L12:
- 146              		.align	2
- 147              	.L11:
- 148 00b0 00000240 		.word	1073872896
- 149              		.cfi_endproc
- 150              	.LFE130:
- 152              		.text
- 153              	.Letext0:
- 154              		.file 2 "D:/Tools/xpack-arm-none-eabi-gcc-13.2.1-1.1/arm-none-eabi/include/machine/_default_types.
- 155              		.file 3 "D:/Tools/xpack-arm-none-eabi-gcc-13.2.1-1.1/arm-none-eabi/include/sys/_stdint.h"
- 156              		.file 4 "Core/Src/../Inc/lb1_init.h"
-ARM GAS  C:\Users\anast\AppData\Local\Temp\cchtGjrM.s 			page 5
+ 138              		.loc 1 21 18 is_stmt 0 view .LVU32
+ 139 00aa 0122     		movs	r2, #1
+ 140              	.LVL10:
+ 141              	.L6:
+  33:Core/Src/lb1_main.c ****             BIT_SET(GPIOC_BSRR, GPIOC_LED_SET);
+ 142              		.loc 1 33 9 is_stmt 1 view .LVU33
+  33:Core/Src/lb1_main.c ****             BIT_SET(GPIOC_BSRR, GPIOC_LED_SET);
+ 143              		.loc 1 33 12 is_stmt 0 view .LVU34
+ 144 00ac 002A     		cmp	r2, #0
+ 145 00ae DBD0     		beq	.L2
+ 146 00b0 D3E7     		b	.L7
+ 147              	.L13:
+ 148 00b2 00BF     		.align	2
+ 149              	.L12:
+ 150 00b4 00000240 		.word	1073872896
+ 151              		.cfi_endproc
+ 152              	.LFE130:
+ 154              		.text
+ 155              	.Letext0:
+ 156              		.file 2 "D:/Tools/xpack-arm-none-eabi-gcc-13.2.1-1.1/arm-none-eabi/include/machine/_default_types.
+ 157              		.file 3 "D:/Tools/xpack-arm-none-eabi-gcc-13.2.1-1.1/arm-none-eabi/include/sys/_stdint.h"
+ 158              		.file 4 "Core/Src/../Inc/lb1_init.h"
+ARM GAS  C:\Users\anast\AppData\Local\Temp\cc0E6N3d.s 			page 5
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 lb1_main.c
-C:\Users\anast\AppData\Local\Temp\cchtGjrM.s:21     .text.main:00000000 $t
-C:\Users\anast\AppData\Local\Temp\cchtGjrM.s:27     .text.main:00000000 main
-C:\Users\anast\AppData\Local\Temp\cchtGjrM.s:148    .text.main:000000b0 $d
+C:\Users\anast\AppData\Local\Temp\cc0E6N3d.s:21     .text.main:00000000 $t
+C:\Users\anast\AppData\Local\Temp\cc0E6N3d.s:27     .text.main:00000000 main
+C:\Users\anast\AppData\Local\Temp\cc0E6N3d.s:150    .text.main:000000b4 $d
 
 UNDEFINED SYMBOLS
 GPIO_Init_Memory

@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\anast\AppData\Local\Temp\cc3TCuR1.s 			page 1
+ARM GAS  C:\Users\anast\AppData\Local\Temp\ccrUld1z.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -38,7 +38,7 @@ ARM GAS  C:\Users\anast\AppData\Local\Temp\cc3TCuR1.s 			page 1
   33              		@ link register save eliminated.
    4:Core/Src/lb1_init.c ****     *(uint32_t*)(0x40023800UL+0x30UL) |= 0x06UL;         //Включение тактирован�
   34              		.loc 1 4 5 view .LVU1
-  35 0000 134A     		ldr	r2, .L2
+  35 0000 104A     		ldr	r2, .L2
   36 0002 D2F83038 		ldr	r3, [r2, #2096]
   37              		.loc 1 4 39 is_stmt 0 view .LVU2
   38 0006 43F00603 		orr	r3, r3, #6
@@ -46,205 +46,203 @@ ARM GAS  C:\Users\anast\AppData\Local\Temp\cc3TCuR1.s 			page 1
    5:Core/Src/lb1_init.c **** 
    6:Core/Src/lb1_init.c ****     *(uint32_t*)(0x40020400UL+0x00UL) |= 0x10004001UL;   //Настройка работы 0, 7, 14
   40              		.loc 1 6 5 is_stmt 1 view .LVU3
-  41 000e 114B     		ldr	r3, .L2+4
+  41 000e 0E4B     		ldr	r3, .L2+4
   42 0010 D3F80024 		ldr	r2, [r3, #1024]
   43              		.loc 1 6 39 is_stmt 0 view .LVU4
-  44 0014 1049     		ldr	r1, .L2+8
+  44 0014 0D49     		ldr	r1, .L2+8
   45 0016 0A43     		orrs	r2, r2, r1
   46 0018 C3F80024 		str	r2, [r3, #1024]
-   7:Core/Src/lb1_init.c ****     *(uint32_t*)(0x40020400UL+0x04UL) |= 0x4080UL;       //Настройка на Open-Drain
+   7:Core/Src/lb1_init.c ****     *(uint32_t*)(0x40020400UL+0x04UL) |= 0x00UL;         
   47              		.loc 1 7 5 is_stmt 1 view .LVU5
-  48 001c D3F80424 		ldr	r2, [r3, #1028]
-  49              		.loc 1 7 39 is_stmt 0 view .LVU6
-  50 0020 42F48142 		orr	r2, r2, #16512
-  51 0024 C3F80424 		str	r2, [r3, #1028]
-ARM GAS  C:\Users\anast\AppData\Local\Temp\cc3TCuR1.s 			page 2
-
-
    8:Core/Src/lb1_init.c ****     *(uint32_t*)(0x40020400UL+0x08UL) |= 0x10004001UL;   //Настройка скорости ра
-  52              		.loc 1 8 5 is_stmt 1 view .LVU7
-  53 0028 D3F80824 		ldr	r2, [r3, #1032]
-  54              		.loc 1 8 39 is_stmt 0 view .LVU8
-  55 002c 0A43     		orrs	r2, r2, r1
-  56 002e C3F80824 		str	r2, [r3, #1032]
+  48              		.loc 1 8 5 view .LVU6
+  49 001c D3F80824 		ldr	r2, [r3, #1032]
+  50              		.loc 1 8 39 is_stmt 0 view .LVU7
+ARM GAS  C:\Users\anast\AppData\Local\Temp\ccrUld1z.s 			page 2
+
+
+  51 0020 0A43     		orrs	r2, r2, r1
+  52 0022 C3F80824 		str	r2, [r3, #1032]
    9:Core/Src/lb1_init.c ****     *(uint32_t*)(0x40020400UL+0x18UL) |= 0x40810000UL;
-  57              		.loc 1 9 5 is_stmt 1 view .LVU9
-  58 0032 D3F81824 		ldr	r2, [r3, #1048]
-  59              		.loc 1 9 39 is_stmt 0 view .LVU10
-  60 0036 42F08142 		orr	r2, r2, #1082130432
-  61 003a 42F48032 		orr	r2, r2, #65536
-  62 003e C3F81824 		str	r2, [r3, #1048]
+  53              		.loc 1 9 5 is_stmt 1 view .LVU8
+  54 0026 D3F81824 		ldr	r2, [r3, #1048]
+  55              		.loc 1 9 39 is_stmt 0 view .LVU9
+  56 002a 42F08142 		orr	r2, r2, #1082130432
+  57 002e 42F48032 		orr	r2, r2, #65536
+  58 0032 C3F81824 		str	r2, [r3, #1048]
   10:Core/Src/lb1_init.c ****     
-  11:Core/Src/lb1_init.c ****     *(uint32_t*)(0x40020800UL+0x00UL) |= 0x0000000000000000UL;
-  63              		.loc 1 11 5 is_stmt 1 view .LVU11
-  12:Core/Src/lb1_init.c ****     *(uint32_t*)(0x40020800UL+0x08UL) |= 0x100000UL;
-  64              		.loc 1 12 5 view .LVU12
-  65 0042 D3F80828 		ldr	r2, [r3, #2056]
-  66              		.loc 1 12 39 is_stmt 0 view .LVU13
-  67 0046 42F48012 		orr	r2, r2, #1048576
-  68 004a C3F80828 		str	r2, [r3, #2056]
-  13:Core/Src/lb1_init.c **** }
-  69              		.loc 1 13 1 view .LVU14
-  70 004e 7047     		bx	lr
-  71              	.L3:
-  72              		.align	2
-  73              	.L2:
-  74 0050 00300240 		.word	1073885184
-  75 0054 00000240 		.word	1073872896
-  76 0058 01400010 		.word	268451841
-  77              		.cfi_endproc
-  78              	.LFE130:
-  80              		.section	.text.GPIO_Init_Myself_Macros,"ax",%progbits
-  81              		.align	1
-  82              		.global	GPIO_Init_Myself_Macros
-  83              		.syntax unified
-  84              		.thumb
-  85              		.thumb_func
-  87              	GPIO_Init_Myself_Macros:
-  88              	.LFB131:
-  14:Core/Src/lb1_init.c **** 
-  15:Core/Src/lb1_init.c **** void GPIO_Init_Myself_Macros(void){
-  89              		.loc 1 15 35 is_stmt 1 view -0
-  90              		.cfi_startproc
-  91              		@ args = 0, pretend = 0, frame = 0
-  92              		@ frame_needed = 0, uses_anonymous_args = 0
-  93              		@ link register save eliminated.
-  16:Core/Src/lb1_init.c ****     RCC_AHB1ENR |= RCC_GPIOB_EN | RCC_GPIOC_EN;
-  94              		.loc 1 16 5 view .LVU16
-  95 0000 134A     		ldr	r2, .L5
-  96 0002 D2F83038 		ldr	r3, [r2, #2096]
-  97              		.loc 1 16 17 is_stmt 0 view .LVU17
-  98 0006 43F00603 		orr	r3, r3, #6
-  99 000a C2F83038 		str	r3, [r2, #2096]
+  11:Core/Src/lb1_init.c ****     //*(uint32_t*)(0x40020800UL+0x00UL) |= 0x0000000000000000UL;
+  12:Core/Src/lb1_init.c ****     //*(uint32_t*)(0x40020800UL+0x04UL) |= 0x400UL;
+  13:Core/Src/lb1_init.c ****     *(uint32_t*)(0x40020800UL+0x08UL) |= 0x100000UL;
+  59              		.loc 1 13 5 is_stmt 1 view .LVU10
+  60 0036 D3F80828 		ldr	r2, [r3, #2056]
+  61              		.loc 1 13 39 is_stmt 0 view .LVU11
+  62 003a 42F48012 		orr	r2, r2, #1048576
+  63 003e C3F80828 		str	r2, [r3, #2056]
+  14:Core/Src/lb1_init.c ****     //*(uint32_t*)(0x40020800UL+0x0CUL) |= 0x100000UL;
+  15:Core/Src/lb1_init.c ****     //*(uint32_t*)(0x40020800UL+0x18UL) |= 0x4000000UL;
+  16:Core/Src/lb1_init.c **** }
+  64              		.loc 1 16 1 view .LVU12
+  65 0042 7047     		bx	lr
+  66              	.L3:
+  67              		.align	2
+  68              	.L2:
+  69 0044 00300240 		.word	1073885184
+  70 0048 00000240 		.word	1073872896
+  71 004c 01400010 		.word	268451841
+  72              		.cfi_endproc
+  73              	.LFE130:
+  75              		.section	.text.GPIO_Init_Myself_Macros,"ax",%progbits
+  76              		.align	1
+  77              		.global	GPIO_Init_Myself_Macros
+  78              		.syntax unified
+  79              		.thumb
+  80              		.thumb_func
+  82              	GPIO_Init_Myself_Macros:
+  83              	.LFB131:
   17:Core/Src/lb1_init.c **** 
-  18:Core/Src/lb1_init.c ****     BIT_SET(GPIOB_MODER, RED_GPIOB14 | BLUE_GPIOB7 | YELLOW_GPIOB0);
-ARM GAS  C:\Users\anast\AppData\Local\Temp\cc3TCuR1.s 			page 3
+  18:Core/Src/lb1_init.c **** void GPIO_Init_Myself_Macros(void){
+  84              		.loc 1 18 35 is_stmt 1 view -0
+  85              		.cfi_startproc
+  86              		@ args = 0, pretend = 0, frame = 0
+  87              		@ frame_needed = 0, uses_anonymous_args = 0
+  88              		@ link register save eliminated.
+  19:Core/Src/lb1_init.c ****     RCC_AHB1ENR |= RCC_GPIOB_EN | RCC_GPIOC_EN;
+  89              		.loc 1 19 5 view .LVU14
+  90 0000 134A     		ldr	r2, .L5
+  91 0002 D2F83038 		ldr	r3, [r2, #2096]
+  92              		.loc 1 19 17 is_stmt 0 view .LVU15
+  93 0006 43F00603 		orr	r3, r3, #6
+  94 000a C2F83038 		str	r3, [r2, #2096]
+  20:Core/Src/lb1_init.c **** 
+  21:Core/Src/lb1_init.c ****     BIT_SET(GPIOB_MODER, RED_GPIOB14 | BLUE_GPIOB7 | YELLOW_GPIOB0);
+  95              		.loc 1 21 5 is_stmt 1 view .LVU16
+  96 000e 114B     		ldr	r3, .L5+4
+ARM GAS  C:\Users\anast\AppData\Local\Temp\ccrUld1z.s 			page 3
 
 
- 100              		.loc 1 18 5 is_stmt 1 view .LVU18
- 101 000e 114B     		ldr	r3, .L5+4
- 102 0010 D3F80024 		ldr	r2, [r3, #1024]
- 103 0014 1049     		ldr	r1, .L5+8
- 104 0016 0A43     		orrs	r2, r2, r1
- 105 0018 C3F80024 		str	r2, [r3, #1024]
-  19:Core/Src/lb1_init.c ****     BIT_SET(GPIOB_OTYPER_7_14, RED_GPIOB14_OTYPER | BLUE_GPIOB7_OTYPER);
- 106              		.loc 1 19 5 view .LVU19
- 107 001c D3F80424 		ldr	r2, [r3, #1028]
- 108 0020 42F48142 		orr	r2, r2, #16512
- 109 0024 C3F80424 		str	r2, [r3, #1028]
-  20:Core/Src/lb1_init.c ****     BIT_SET(GPIOB_OSPEEDR, RED_GPIOB14 | BLUE_GPIOB7 | YELLOW_GPIOB0);
- 110              		.loc 1 20 5 view .LVU20
- 111 0028 D3F80824 		ldr	r2, [r3, #1032]
- 112 002c 0A43     		orrs	r2, r2, r1
- 113 002e C3F80824 		str	r2, [r3, #1032]
-  21:Core/Src/lb1_init.c ****     BIT_SET(GPIOB_BSRR, GPIOB_RED_RESET | GPIOB_BLUE_RESET | GPIOB_YELLOW_RESET);
- 114              		.loc 1 21 5 view .LVU21
- 115 0032 D3F81824 		ldr	r2, [r3, #1048]
- 116 0036 42F08142 		orr	r2, r2, #1082130432
- 117 003a 42F48032 		orr	r2, r2, #65536
- 118 003e C3F81824 		str	r2, [r3, #1048]
-  22:Core/Src/lb1_init.c **** 
-  23:Core/Src/lb1_init.c ****     BIT_SET(GPIOC_OSPEEDR, LED_GPIOC10_OUT);
- 119              		.loc 1 23 5 view .LVU22
- 120 0042 D3F80828 		ldr	r2, [r3, #2056]
- 121 0046 42F48012 		orr	r2, r2, #1048576
- 122 004a C3F80828 		str	r2, [r3, #2056]
-  24:Core/Src/lb1_init.c **** }
- 123              		.loc 1 24 1 is_stmt 0 view .LVU23
- 124 004e 7047     		bx	lr
- 125              	.L6:
- 126              		.align	2
- 127              	.L5:
- 128 0050 00300240 		.word	1073885184
- 129 0054 00000240 		.word	1073872896
- 130 0058 01400010 		.word	268451841
- 131              		.cfi_endproc
- 132              	.LFE131:
- 134              		.section	.text.GPIO_Init_CMSIS,"ax",%progbits
- 135              		.align	1
- 136              		.global	GPIO_Init_CMSIS
- 137              		.syntax unified
- 138              		.thumb
- 139              		.thumb_func
- 141              	GPIO_Init_CMSIS:
- 142              	.LFB132:
+  97 0010 D3F80024 		ldr	r2, [r3, #1024]
+  98 0014 1049     		ldr	r1, .L5+8
+  99 0016 0A43     		orrs	r2, r2, r1
+ 100 0018 C3F80024 		str	r2, [r3, #1024]
+  22:Core/Src/lb1_init.c ****     BIT_SET(GPIOB_OTYPER_7_14, RED_GPIOB14_OTYPER | BLUE_GPIOB7_OTYPER);
+ 101              		.loc 1 22 5 view .LVU17
+ 102 001c D3F80424 		ldr	r2, [r3, #1028]
+ 103 0020 42F48142 		orr	r2, r2, #16512
+ 104 0024 C3F80424 		str	r2, [r3, #1028]
+  23:Core/Src/lb1_init.c ****     BIT_SET(GPIOB_OSPEEDR, RED_GPIOB14 | BLUE_GPIOB7 | YELLOW_GPIOB0);
+ 105              		.loc 1 23 5 view .LVU18
+ 106 0028 D3F80824 		ldr	r2, [r3, #1032]
+ 107 002c 0A43     		orrs	r2, r2, r1
+ 108 002e C3F80824 		str	r2, [r3, #1032]
+  24:Core/Src/lb1_init.c ****     BIT_SET(GPIOB_BSRR, GPIOB_RED_RESET | GPIOB_BLUE_RESET | GPIOB_YELLOW_RESET);
+ 109              		.loc 1 24 5 view .LVU19
+ 110 0032 D3F81824 		ldr	r2, [r3, #1048]
+ 111 0036 42F08142 		orr	r2, r2, #1082130432
+ 112 003a 42F48032 		orr	r2, r2, #65536
+ 113 003e C3F81824 		str	r2, [r3, #1048]
   25:Core/Src/lb1_init.c **** 
-  26:Core/Src/lb1_init.c **** void GPIO_Init_CMSIS(void){
- 143              		.loc 1 26 27 is_stmt 1 view -0
- 144              		.cfi_startproc
- 145              		@ args = 0, pretend = 0, frame = 0
- 146              		@ frame_needed = 0, uses_anonymous_args = 0
- 147              		@ link register save eliminated.
-  27:Core/Src/lb1_init.c ****     SET_BIT(RCC->AHB1ENR, RCC_AHB1ENR_GPIOBEN); //AHB1ENR-ПОЛЕ СТРУКТУРЫ,  RCC_AHB1ENR
- 148              		.loc 1 27 5 view .LVU25
- 149 0000 0E4A     		ldr	r2, .L8
-ARM GAS  C:\Users\anast\AppData\Local\Temp\cc3TCuR1.s 			page 4
-
-
- 150 0002 136B     		ldr	r3, [r2, #48]
- 151 0004 43F00203 		orr	r3, r3, #2
- 152 0008 1363     		str	r3, [r2, #48]
+  26:Core/Src/lb1_init.c ****     BIT_SET(GPIOC_OSPEEDR, LED_GPIOC10_OUT);
+ 114              		.loc 1 26 5 view .LVU20
+ 115 0042 D3F80828 		ldr	r2, [r3, #2056]
+ 116 0046 42F48012 		orr	r2, r2, #1048576
+ 117 004a C3F80828 		str	r2, [r3, #2056]
+  27:Core/Src/lb1_init.c **** }
+ 118              		.loc 1 27 1 is_stmt 0 view .LVU21
+ 119 004e 7047     		bx	lr
+ 120              	.L6:
+ 121              		.align	2
+ 122              	.L5:
+ 123 0050 00300240 		.word	1073885184
+ 124 0054 00000240 		.word	1073872896
+ 125 0058 01400010 		.word	268451841
+ 126              		.cfi_endproc
+ 127              	.LFE131:
+ 129              		.section	.text.GPIO_Init_CMSIS,"ax",%progbits
+ 130              		.align	1
+ 131              		.global	GPIO_Init_CMSIS
+ 132              		.syntax unified
+ 133              		.thumb
+ 134              		.thumb_func
+ 136              	GPIO_Init_CMSIS:
+ 137              	.LFB132:
   28:Core/Src/lb1_init.c **** 
-  29:Core/Src/lb1_init.c ****     SET_BIT(GPIOB->MODER, GPIO_MODER_MODE14_0 | GPIO_MODER_MODE7_0 | GPIO_MODER_MODE0_0); // вкл
- 153              		.loc 1 29 5 view .LVU26
- 154 000a 0D4B     		ldr	r3, .L8+4
- 155 000c 1A68     		ldr	r2, [r3]
- 156 000e 0D49     		ldr	r1, .L8+8
- 157 0010 0A43     		orrs	r2, r2, r1
- 158 0012 1A60     		str	r2, [r3]
-  30:Core/Src/lb1_init.c ****     SET_BIT(GPIOB->OTYPER, GPIO_OTYPER_OT7 | GPIO_OTYPER_OT14); //
- 159              		.loc 1 30 5 view .LVU27
- 160 0014 5A68     		ldr	r2, [r3, #4]
- 161 0016 42F48142 		orr	r2, r2, #16512
- 162 001a 5A60     		str	r2, [r3, #4]
-  31:Core/Src/lb1_init.c ****     SET_BIT(GPIOB->OSPEEDR, GPIO_OSPEEDER_OSPEEDR0_0 | GPIO_OSPEEDER_OSPEEDR7_0 | GPIO_OSPEEDER_OSP
- 163              		.loc 1 31 5 view .LVU28
- 164 001c 9A68     		ldr	r2, [r3, #8]
- 165 001e 0A43     		orrs	r2, r2, r1
- 166 0020 9A60     		str	r2, [r3, #8]
-  32:Core/Src/lb1_init.c ****     SET_BIT(GPIOB->BSRR, GPIO_BSRR_BR0 | GPIO_BSRR_BR7 | GPIO_BSRR_BR14); //
- 167              		.loc 1 32 5 view .LVU29
- 168 0022 9A69     		ldr	r2, [r3, #24]
- 169 0024 42F08142 		orr	r2, r2, #1082130432
- 170 0028 42F48032 		orr	r2, r2, #65536
- 171 002c 9A61     		str	r2, [r3, #24]
-  33:Core/Src/lb1_init.c **** 
-  34:Core/Src/lb1_init.c ****     SET_BIT(GPIOC->OSPEEDR, GPIO_OSPEEDER_OSPEEDR1_0);
- 172              		.loc 1 34 5 view .LVU30
- 173 002e 064A     		ldr	r2, .L8+12
- 174 0030 9368     		ldr	r3, [r2, #8]
- 175 0032 43F00403 		orr	r3, r3, #4
- 176 0036 9360     		str	r3, [r2, #8]
-  35:Core/Src/lb1_init.c **** }
- 177              		.loc 1 35 1 is_stmt 0 view .LVU31
- 178 0038 7047     		bx	lr
- 179              	.L9:
- 180 003a 00BF     		.align	2
- 181              	.L8:
- 182 003c 00380240 		.word	1073887232
- 183 0040 00040240 		.word	1073873920
- 184 0044 01400010 		.word	268451841
- 185 0048 00080240 		.word	1073874944
- 186              		.cfi_endproc
- 187              	.LFE132:
- 189              		.text
- 190              	.Letext0:
- 191              		.file 2 "D:/Tools/xpack-arm-none-eabi-gcc-13.2.1-1.1/arm-none-eabi/include/machine/_default_types.
- 192              		.file 3 "D:/Tools/xpack-arm-none-eabi-gcc-13.2.1-1.1/arm-none-eabi/include/sys/_stdint.h"
- 193              		.file 4 "CMSIS/Devices/STM32F4xx/Inc/STM32F429xx/stm32f429xx.h"
-ARM GAS  C:\Users\anast\AppData\Local\Temp\cc3TCuR1.s 			page 5
+  29:Core/Src/lb1_init.c **** void GPIO_Init_CMSIS(void){
+ 138              		.loc 1 29 27 is_stmt 1 view -0
+ 139              		.cfi_startproc
+ 140              		@ args = 0, pretend = 0, frame = 0
+ 141              		@ frame_needed = 0, uses_anonymous_args = 0
+ 142              		@ link register save eliminated.
+  30:Core/Src/lb1_init.c ****     SET_BIT(RCC->AHB1ENR, RCC_AHB1ENR_GPIOBEN); //AHB1ENR-ПОЛЕ СТРУКТУРЫ,  RCC_AHB1ENR
+ 143              		.loc 1 30 5 view .LVU23
+ 144 0000 0E4A     		ldr	r2, .L8
+ 145 0002 136B     		ldr	r3, [r2, #48]
+ 146 0004 43F00203 		orr	r3, r3, #2
+ARM GAS  C:\Users\anast\AppData\Local\Temp\ccrUld1z.s 			page 4
+
+
+ 147 0008 1363     		str	r3, [r2, #48]
+  31:Core/Src/lb1_init.c **** 
+  32:Core/Src/lb1_init.c ****     SET_BIT(GPIOB->MODER, GPIO_MODER_MODE14_0 | GPIO_MODER_MODE7_0 | GPIO_MODER_MODE0_0); // вкл
+ 148              		.loc 1 32 5 view .LVU24
+ 149 000a 0D4B     		ldr	r3, .L8+4
+ 150 000c 1A68     		ldr	r2, [r3]
+ 151 000e 0D49     		ldr	r1, .L8+8
+ 152 0010 0A43     		orrs	r2, r2, r1
+ 153 0012 1A60     		str	r2, [r3]
+  33:Core/Src/lb1_init.c ****     SET_BIT(GPIOB->OTYPER, GPIO_OTYPER_OT7 | GPIO_OTYPER_OT14); //
+ 154              		.loc 1 33 5 view .LVU25
+ 155 0014 5A68     		ldr	r2, [r3, #4]
+ 156 0016 42F48142 		orr	r2, r2, #16512
+ 157 001a 5A60     		str	r2, [r3, #4]
+  34:Core/Src/lb1_init.c ****     SET_BIT(GPIOB->OSPEEDR, GPIO_OSPEEDER_OSPEEDR0_0 | GPIO_OSPEEDER_OSPEEDR7_0 | GPIO_OSPEEDER_OSP
+ 158              		.loc 1 34 5 view .LVU26
+ 159 001c 9A68     		ldr	r2, [r3, #8]
+ 160 001e 0A43     		orrs	r2, r2, r1
+ 161 0020 9A60     		str	r2, [r3, #8]
+  35:Core/Src/lb1_init.c ****     SET_BIT(GPIOB->BSRR, GPIO_BSRR_BR0 | GPIO_BSRR_BR7 | GPIO_BSRR_BR14); //
+ 162              		.loc 1 35 5 view .LVU27
+ 163 0022 9A69     		ldr	r2, [r3, #24]
+ 164 0024 42F08142 		orr	r2, r2, #1082130432
+ 165 0028 42F48032 		orr	r2, r2, #65536
+ 166 002c 9A61     		str	r2, [r3, #24]
+  36:Core/Src/lb1_init.c **** 
+  37:Core/Src/lb1_init.c ****     SET_BIT(GPIOC->OSPEEDR, GPIO_OSPEEDER_OSPEEDR1_0);
+ 167              		.loc 1 37 5 view .LVU28
+ 168 002e 064A     		ldr	r2, .L8+12
+ 169 0030 9368     		ldr	r3, [r2, #8]
+ 170 0032 43F00403 		orr	r3, r3, #4
+ 171 0036 9360     		str	r3, [r2, #8]
+  38:Core/Src/lb1_init.c **** }
+ 172              		.loc 1 38 1 is_stmt 0 view .LVU29
+ 173 0038 7047     		bx	lr
+ 174              	.L9:
+ 175 003a 00BF     		.align	2
+ 176              	.L8:
+ 177 003c 00380240 		.word	1073887232
+ 178 0040 00040240 		.word	1073873920
+ 179 0044 01400010 		.word	268451841
+ 180 0048 00080240 		.word	1073874944
+ 181              		.cfi_endproc
+ 182              	.LFE132:
+ 184              		.text
+ 185              	.Letext0:
+ 186              		.file 2 "D:/Tools/xpack-arm-none-eabi-gcc-13.2.1-1.1/arm-none-eabi/include/machine/_default_types.
+ 187              		.file 3 "D:/Tools/xpack-arm-none-eabi-gcc-13.2.1-1.1/arm-none-eabi/include/sys/_stdint.h"
+ 188              		.file 4 "CMSIS/Devices/STM32F4xx/Inc/STM32F429xx/stm32f429xx.h"
+ARM GAS  C:\Users\anast\AppData\Local\Temp\ccrUld1z.s 			page 5
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 lb1_init.c
-C:\Users\anast\AppData\Local\Temp\cc3TCuR1.s:21     .text.GPIO_Init_Memory:00000000 $t
-C:\Users\anast\AppData\Local\Temp\cc3TCuR1.s:27     .text.GPIO_Init_Memory:00000000 GPIO_Init_Memory
-C:\Users\anast\AppData\Local\Temp\cc3TCuR1.s:74     .text.GPIO_Init_Memory:00000050 $d
-C:\Users\anast\AppData\Local\Temp\cc3TCuR1.s:81     .text.GPIO_Init_Myself_Macros:00000000 $t
-C:\Users\anast\AppData\Local\Temp\cc3TCuR1.s:87     .text.GPIO_Init_Myself_Macros:00000000 GPIO_Init_Myself_Macros
-C:\Users\anast\AppData\Local\Temp\cc3TCuR1.s:128    .text.GPIO_Init_Myself_Macros:00000050 $d
-C:\Users\anast\AppData\Local\Temp\cc3TCuR1.s:135    .text.GPIO_Init_CMSIS:00000000 $t
-C:\Users\anast\AppData\Local\Temp\cc3TCuR1.s:141    .text.GPIO_Init_CMSIS:00000000 GPIO_Init_CMSIS
-C:\Users\anast\AppData\Local\Temp\cc3TCuR1.s:182    .text.GPIO_Init_CMSIS:0000003c $d
+C:\Users\anast\AppData\Local\Temp\ccrUld1z.s:21     .text.GPIO_Init_Memory:00000000 $t
+C:\Users\anast\AppData\Local\Temp\ccrUld1z.s:27     .text.GPIO_Init_Memory:00000000 GPIO_Init_Memory
+C:\Users\anast\AppData\Local\Temp\ccrUld1z.s:69     .text.GPIO_Init_Memory:00000044 $d
+C:\Users\anast\AppData\Local\Temp\ccrUld1z.s:76     .text.GPIO_Init_Myself_Macros:00000000 $t
+C:\Users\anast\AppData\Local\Temp\ccrUld1z.s:82     .text.GPIO_Init_Myself_Macros:00000000 GPIO_Init_Myself_Macros
+C:\Users\anast\AppData\Local\Temp\ccrUld1z.s:123    .text.GPIO_Init_Myself_Macros:00000050 $d
+C:\Users\anast\AppData\Local\Temp\ccrUld1z.s:130    .text.GPIO_Init_CMSIS:00000000 $t
+C:\Users\anast\AppData\Local\Temp\ccrUld1z.s:136    .text.GPIO_Init_CMSIS:00000000 GPIO_Init_CMSIS
+C:\Users\anast\AppData\Local\Temp\ccrUld1z.s:177    .text.GPIO_Init_CMSIS:0000003c $d
 
 NO UNDEFINED SYMBOLS
